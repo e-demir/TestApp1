@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-header',
@@ -8,6 +8,7 @@ import { Component, Input, OnInit } from '@angular/core';
 export class HeaderComponent implements OnInit {
 
   @Input() public defaultTerm: string = '';
+  @Output() public complete: EventEmitter<any> = new EventEmitter<any>();
 
   public menuList: any[] = [
     {
@@ -55,8 +56,8 @@ export class HeaderComponent implements OnInit {
     // }    
   }
 
-  private postToServer(value: any) {
-    console.log(value);
+  private postToServer(value: any) {    
+    this.complete.emit(value);
   }
 
 }
