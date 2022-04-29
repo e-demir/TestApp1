@@ -23,6 +23,8 @@ export class HeaderComponent implements OnInit {
   ]
 
   private timer:any;
+  public text:string = "Emrullah DEMİR";
+  public name:string = "searchTerm";
 
   constructor() { }
 

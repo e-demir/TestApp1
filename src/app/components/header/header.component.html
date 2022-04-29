@@ -15,7 +15,17 @@
       </ul>
 
       <div class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3">
-        <input type="search" (keyup)="onChange($event)" class="form-control form-control-dark" placeholder="Search..." aria-label="Search">
+        <!-- <input type="search" 
+        (keyup)="onChange($event)" 
+        class="form-control form-control-dark" 
+        placeholder="Search..." 
+        aria-label="Search"> -->
+        <input type="search" 
+        [value]="text" 
+        [name]="name"
+        class="form-control form-control-dark" 
+        placeholder="Search..." 
+        aria-label="Search">
       </div>
 
       <div class="text-end">
