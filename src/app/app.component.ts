@@ -8,9 +8,9 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'TestApp1';
 
-public getResult(completeResult:any){
-  console.log(completeResult);  
-}
+  public defaultComponent : string = "Ana Sayfa";
 
-
+  public getResult(completeResult: any) {
+    this.defaultComponent = completeResult.name;
+  }
 }

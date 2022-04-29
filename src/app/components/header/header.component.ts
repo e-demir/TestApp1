@@ -39,6 +39,10 @@ export class HeaderComponent implements OnInit {
     menu = !menu.isActive;
   }
 
+  public getActivePage(menu:any){
+    this.complete.emit(menu);
+  }
+
   public onChange(event: any) {
     event.preventDefault();
     clearTimeout(this.timer);

@@ -10,7 +10,7 @@
       <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
         <li *ngFor="let menu of menuList">
           <!-- <a href="javascript;" (click)="onClickEvent(menu)" class="nav-link px-2 text-white">{{menu.name}}</a> -->
-          <a href="javascript;" class="nav-link px-2 text-white">{{menu.name}}</a>
+          <a href="javascript:;" (click)="getActivePage(menu)" class="nav-link px-2 text-white">{{menu.name}}</a>
         </li>
       </ul>
 
